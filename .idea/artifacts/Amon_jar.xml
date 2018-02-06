@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Amon:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Amon_jar</output-path>
+    <root id="archive" name="Amon.jar">
+      <element id="module-output" name="Amon" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/solarniKalkulator/libs/jfoenix-9.0.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="solarniKalkulator.controllers.UlogController">
+   <children>
+      <Label text="Modul">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator />
+      <HBox alignment="CENTER_LEFT" spacing="50.0">
+         <children>
+            <Label prefWidth="200.0" text="Broj modula:" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="broj_modulaField" prefHeight="35.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <Separator />
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="43.0" spacing="50.0">
+         <children>
+            <Label prefWidth="200.0" text="Cijena po modulu:" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="cijenapomoduluField" alignment="CENTER_RIGHT" focusColor="GREEN" prefHeight="35.0" prefWidth="200.0" unFocusColor="BLACK" />
+            <Label text="kn" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Separator />
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" spacing="50.0">
+         <children>
+            <Label prefWidth="200.0" text="Dodatna oprema:" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="dodatnaopremaField" alignment="CENTER_RIGHT" focusColor="GREEN" prefHeight="35.0" prefWidth="200.0" unFocusColor="BLACK" />
+            <Label text="kn" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Separator />
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="119.0" spacing="50.0">
+         <children>
+            <Label prefWidth="200.0" text="Kamatna stopa:" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="kamatnastopaField" prefHeight="35.0" prefWidth="200.0" />
+            <Label text="\%" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Separator />
+      <Label layoutX="235.0" layoutY="10.0" text="Potrošnja električne energije">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator />
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="179.0" spacing="50.0">
+         <children>
+            <Label prefWidth="200.0" text="Cijena struje:" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="cijenastrujeField" alignment="CENTER_RIGHT" focusColor="GREEN" prefHeight="35.0" prefWidth="200.0" text="0.67" unFocusColor="BLACK" />
+            <Label text="kn/kWh" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Separator />
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="322.0" spacing="50.0">
+         <children>
+            <Label prefWidth="200.0" text="Državni poticaji:" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="drzavnipoticajiField" alignment="CENTER_RIGHT" focusColor="GREEN" prefHeight="35.0" prefWidth="200.0" text="3.40" unFocusColor="BLACK" />
+            <Label text="kn/kWh" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Separator />
+      <HBox alignment="CENTER_LEFT" spacing="50.0">
+         <children>
+            <JFXCheckBox fx:id="godisnjaBtn" disable="true" onAction="#handlegodisnjaBox" prefWidth="200.0" selected="true" text="Godišnja" textFill="GREEN" />
+            <JFXTextField fx:id="godisnjapotrosnjaField" alignment="TOP_RIGHT" focusColor="GREEN" prefHeight="35.0" prefWidth="200.0" text="3230" unFocusColor="BLACK" />
+            <Label text="kWh" textFill="GREEN">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Separator />
+      <HBox>
+         <children>
+            <JFXCheckBox fx:id="mjesecnaBtn" onAction="#handlemjesecnaBox" prefWidth="200.0" text="Mjesečna" textFill="GREEN" />
+         </children>
+      </HBox>
+      <HBox fx:id="mjeseciHbox" alignment="CENTER_LEFT" spacing="50.0" visible="false">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Siječanj" textFill="GREEN" />
+                        <JFXTextField fx:id="sijecanjField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Veljača" textFill="GREEN" />
+                        <JFXTextField fx:id="veljacaField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="37.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Ožuljak" textFill="GREEN" />
+                        <JFXTextField fx:id="ozuljakField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="64.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Travanj" textFill="GREEN" />
+                        <JFXTextField fx:id="travanjField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="91.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Svibanj" textFill="GREEN" />
+                        <JFXTextField fx:id="svibanjField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="118.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Lipanj" textFill="GREEN" />
+                        <JFXTextField fx:id="lipanjField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" />
+            <VBox alignment="CENTER" layoutX="197.0" layoutY="10.0">
+               <children>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Srpanj" textFill="GREEN" />
+                        <JFXTextField fx:id="srpanjField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Kolovoz" textFill="GREEN" />
+                        <JFXTextField fx:id="kolovozField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="37.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Rujan" textFill="GREEN" />
+                        <JFXTextField fx:id="rujanField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="64.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Listopad" textFill="GREEN" />
+                        <JFXTextField fx:id="listopadField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="91.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Studeni" textFill="GREEN" />
+                        <JFXTextField fx:id="studeniField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="118.0" spacing="20.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Prosinac" textFill="GREEN" />
+                        <JFXTextField fx:id="prosinacField" alignment="CENTER" focusColor="GREEN" prefWidth="80.0" unFocusColor="BLACK" />
+                        <Label text="kWh" textFill="GREEN" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

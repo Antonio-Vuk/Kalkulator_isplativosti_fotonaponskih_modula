@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="525.0" prefWidth="625.0" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="solarniKalkulator.controllers.LokacijaController">
+   <children>
+      <Label text="Osnovni podatci">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator prefWidth="200.0" />
+      <VBox stylesheets="@../solarniKalkulator.css">
+         <children>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Grad:" textFill="GREEN">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="gradField" prefHeight="35.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <Separator>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Separator>
+      <VBox layoutX="15.0" layoutY="68.0">
+         <children>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Nagib krova:" textFill="GREEN">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="nagibkrovaField" prefHeight="35.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <Separator>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Separator>
+      <VBox layoutX="15.0" layoutY="105.0">
+         <children>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Orijentacija:" textFill="GREEN">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="orijentacijaField" prefHeight="35.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <Separator>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Separator>
+      <VBox layoutX="15.0" layoutY="142.0">
+         <children>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Površina krova:" textFill="GREEN">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="povrsinakrovaField" focusColor="GREEN" prefHeight="35.0" prefWidth="200.0" unFocusColor="BLACK" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <Separator>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Separator>
+      <VBox layoutX="15.0" layoutY="179.0">
+         <children>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Vrsta modula:" textFill="GREEN">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="vrstamodulaField" prefHeight="35.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets top="15.0" />
+   </padding>
+</VBox>

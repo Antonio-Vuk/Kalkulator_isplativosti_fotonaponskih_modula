@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="solarniKalkulator.MainController">
+   <children>
+      <BorderPane>
+         <top>
+            <VBox alignment="CENTER" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/logo-amon-large.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Separator />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </top>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <left>
+            <VBox prefWidth="100.0" spacing="10.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="button1" onAction="#animatebutton1" prefHeight="80.0" prefWidth="80.0" style="-fx-background-radius: 200; -fx-background-color: green;" text="Gdje se nalazite?" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="button2" onAction="#animatebutton2" prefHeight="80.0" prefWidth="80.0" style="-fx-background-radius: 200; -fx-background-color: green;" text="Koliko planirate uloziti?" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="button3" onAction="#animatebutton3" prefHeight="80.0" prefWidth="80.0" style="-fx-background-radius: 200; -fx-background-color: green;" text="Izracun" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <right>
+            <ScrollPane fx:id="mainContent" prefHeight="530.0" prefWidth="630.0" BorderPane.alignment="CENTER">
+               <fx:include alignment="CENTER" source="lokacijaGUI.fxml">
+               </fx:include>
+            </ScrollPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

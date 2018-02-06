@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vboxgreske" alignment="TOP_CENTER" prefHeight="525.0" prefWidth="625.0" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="solarniKalkulator.controllers.GreskaController">
+   <children>
+      <Label text="Greška kod izračuna">
+         <padding>
+            <Insets bottom="5.0" left="15.0" top="15.0" />
+         </padding>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator />
+      <Label fx:id="gradgreskaLabel" prefHeight="30.0" text="Odaberite grad za koji želite napraviti izračun" textFill="GREEN">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="nagibgreskaLabel" prefHeight="30.0" text="Odaberite nagib krova za koji želite napraviti izračun" textFill="GREEN">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="orijentacijagreskaLabel" prefHeight="30.0" text="Odaberite orijentaciju krova za koju želite napraviti izračun" textFill="GREEN">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="povrsinagreskaLabel" prefHeight="30.0" text="Odaberite površinu krova za koji želite napraviti izračum" textFill="GREEN">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="modulgreskaLabel" prefHeight="30.0" text="Odaberite modul koji želite postaviti na krov" textFill="GREEN">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>
